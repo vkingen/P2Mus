@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/test.unity
+    guid: cc631e1e155dc494d95fbebfa135e5d9
+  - enabled: 1
+    path: Assets/GroupMembers/Lasse/1.Startside.unity
+    guid: 539922648e0a9f24a8f0267c172da856
+  - enabled: 1
+    path: Assets/GroupMembers/Lasse/2.ScanPage.unity
+    guid: 7c1b9c851fd47b74693660d47851d696
+  - enabled: 1
+    path: Assets/GroupMembers/Lasse/3.CameraPage.unity
+    guid: 4cace124c6e1efe49a8286aa8c74ba7b
+  - enabled: 1
+    path: Assets/GroupMembers/Lasse/4.TransitionScene.unity
+    guid: d1ee3875697acee47b046e4b18eb772d
+  - enabled: 1
+    path: Assets/GroupMembers/Lasse/5.ItemScanned.unity
+    guid: ae98e72c628152c428d3e87a29a858bf
+  - enabled: 1
+    path: Assets/GroupMembers/Lasse/6.ItemScanned.unity
+    guid: 2e8b3130c309ce040b6ffefbd2b7993e
   m_configObjects: {}
