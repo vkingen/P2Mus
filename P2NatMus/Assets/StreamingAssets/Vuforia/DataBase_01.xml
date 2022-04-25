@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="13" size="2.000000 2.224806" />
-    <ImageTarget name="12" size="2.000000 1.971077" />
-    <ImageTarget name="11" size="2.000000 1.786332" />
+    <ImageTarget name="Rune_02" size="10.000000 10.403226" />
+    <ImageTarget name="Rune_01" size="10.000000 9.435484" />
+    <ImageTarget name="Rushmore" size="10.000000 13.333333" />
   </Tracking>
 </QCARConfig>
