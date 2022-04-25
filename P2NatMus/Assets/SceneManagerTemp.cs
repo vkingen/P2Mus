@@ -22,4 +22,20 @@ public class SceneManagerTemp : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+
+
+    bool hasBeenActivatedWithAwesomeDelayHomie = false;
+    public void ChangeSceneWithDelay()
+    {
+        if(!hasBeenActivatedWithAwesomeDelayHomie)
+            StartCoroutine(Delay());
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(10f);
+        hasBeenActivatedWithAwesomeDelayHomie = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 }
