@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Source: //Source: https://forum.unity.com/threads/mobile-touch-to-orbit-pan-and-zoom-camera-without-fix-target-in-one-script.522607/
-
-//THIS SCRIPT SHOULD BE PLACED ON THE MAIN CAMERA IN UNITY
-
 public class ObjectInspector : MonoBehaviour
 {
     public Transform target; //Target for orbit and zoom
@@ -22,14 +18,14 @@ public class ObjectInspector : MonoBehaviour
 
     //public float panSpeed = 0.3f; Should maybe replace x and y speed in case of these values always being the same 
 
-    private float _xDeg = 0.0f;
-    private float _yDeg = 0.0f;
-    private float _currentDistance;
-    private float _desiredDistance;
-    private Quaternion _currentRotation;
-    private Quaternion _desiredRotation;
-    private Quaternion _rotation;
-    private Vector3 _position;
+    private float xDeg = 0.0f;
+    private float yDeg = 0.0f;
+    private float currentDistance;
+    private float desiredDistance;
+    private Quaternion currentRotation;
+    private Quaternion desiredRotation;
+    private Quaternion rotation;
+    private Vector3 position;
 
     void Start() 
     { 
@@ -52,17 +48,17 @@ public class ObjectInspector : MonoBehaviour
         }
 
         distance = Vector3.Distance(transform.position, target.position);
-        _currentDistance = distance;
-        _desiredDistance = distance;
+        currentDistance = distance;
+        desiredDistance = distance;
 
         //be sure to grab the current rotations as starting points.
-        _position = transform.position;
-        _rotation = transform.rotation;
-        _currentRotation = transform.rotation;
-        _desiredRotation = transform.rotation;
+        position = transform.position;
+        rotation = transform.rotation;
+        currentRotation = transform.rotation;
+        desiredRotation = transform.rotation;
 
-        _xDeg = Vector3.Angle(Vector3.right, transform.right);
-        _yDeg = Vector3.Angle(Vector3.up, transform.up);
+        xDeg = Vector3.Angle(Vector3.right, transform.right);
+        yDeg = Vector3.Angle(Vector3.up, transform.up);
     }
 
     void LateUpdate()
@@ -90,32 +86,32 @@ public class ObjectInspector : MonoBehaviour
 
             float deltaMagDiff = prevTouchDeltaMag - TouchDeltaMag;
 
-            _desiredDistance += deltaMagDiff * Time.deltaTime * zoomRate * 0.0025f * Mathf.Abs(_desiredDistance);
+            desiredDistance += deltaMagDiff * Time.deltaTime * zoomRate * 0.0025f * Mathf.Abs(desiredDistance);
         }
         // If one or two fingers on the screen and they are moving - ORBIT!
         if (Input.touchCount == 1 || (Input.touchCount == 2 && Input.GetTouch(0).phase == TouchPhase.Moved))
         {
             Vector2 touchposition = Input.GetTouch(0).deltaPosition; //Gets position of touch movement
-            _xDeg += touchposition.x * xSpeed * 0.002f; //x rotation
-            _yDeg -= touchposition.y * ySpeed * 0.002f; //y rotation
-            _yDeg = ClampAngle(_yDeg, yMinLimit, yMaxLimit); //Limits the y rotation
+            xDeg += touchposition.x * xSpeed * 0.002f; //x rotation
+            yDeg -= touchposition.y * ySpeed * 0.002f; //y rotation
+            yDeg = ClampAngle(yDeg, yMinLimit, yMaxLimit); //Limits the y rotation
 
         }
-        _desiredRotation = Quaternion.Euler(_yDeg, _xDeg, 0);
-        _currentRotation = transform.rotation;
-        _rotation = Quaternion.Lerp(_currentRotation, _desiredRotation, Time.deltaTime * zoomDampening);
-        transform.rotation = _rotation;
+        desiredRotation = Quaternion.Euler(yDeg, xDeg, 0);
+        currentRotation = transform.rotation;
+        rotation = Quaternion.Lerp(currentRotation, desiredRotation, Time.deltaTime * zoomDampening);
+        transform.rotation = rotation;
         
 
         ////////Orbit Position
 
 
-        _desiredDistance = Mathf.Clamp(_desiredDistance, minDistance, maxDistance);
-        _currentDistance = Mathf.Lerp(_currentDistance, _desiredDistance, Time.deltaTime * zoomDampening);
+        desiredDistance = Mathf.Clamp(desiredDistance, minDistance, maxDistance);
+        currentDistance = Mathf.Lerp(currentDistance, desiredDistance, Time.deltaTime * zoomDampening);
 
-        _position = target.position - (_rotation * Vector3.forward * _currentDistance);
+        position = target.position - (rotation * Vector3.forward * currentDistance);
 
-        transform.position = _position;
+        transform.position = position;
     }
     private static float ClampAngle(float angle, float min, float max)
     {
