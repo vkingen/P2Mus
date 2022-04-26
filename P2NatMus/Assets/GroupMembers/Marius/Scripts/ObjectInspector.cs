@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Source: https://forum.unity.com/threads/mobile-touch-to-orbit-pan-and-zoom-camera-without-fix-target-in-one-script.522607/
+
+//This script should be placed on the Main Camera.
 public class ObjectInspector : MonoBehaviour
 {
     public Transform target; //Target for orbit and zoom
