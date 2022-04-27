@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/GroupMembers/Lasse/1.Startside.unity
+    path: Assets/GroupMembers/Lasse/Scenes/1.Startside.unity
     guid: 539922648e0a9f24a8f0267c172da856
   - enabled: 0
-    path: Assets/GroupMembers/Lasse/2.ScanPage.unity
+    path: Assets/GroupMembers/Lasse/Scenes/2.ScanPage.unity
     guid: 7c1b9c851fd47b74693660d47851d696
   - enabled: 0
-    path: Assets/GroupMembers/Lasse/3.CameraPage.unity
+    path: Assets/GroupMembers/Lasse/Scenes/3.CameraPage.unity
     guid: 4cace124c6e1efe49a8286aa8c74ba7b
   - enabled: 1
     path: Assets/GroupMembers/Marius/Scenes/ObjectInspectorScene.unity
