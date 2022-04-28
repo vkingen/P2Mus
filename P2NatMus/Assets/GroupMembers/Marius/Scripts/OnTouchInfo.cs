@@ -9,7 +9,7 @@ public class OnTouchInfo : MonoBehaviour
     private float _touchCounter = 0; //This variable keeps track of whether the infoText is active(1) or not(0).
     private float _touchTime; //Keeps track of time since start of program.
 
-    public float touchThresh = 0.2f; //Max amount of time a touch can last for infoText to displayed. 
+    public float touchThresh = 0.2f; //Max amount of time a touch can last for infoText to toggled. 
 
     private void Awake()
     {
