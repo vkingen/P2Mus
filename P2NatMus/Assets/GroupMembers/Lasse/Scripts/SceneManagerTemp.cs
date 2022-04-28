@@ -5,24 +5,39 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerTemp : MonoBehaviour
 {
-    SceneManagerTemp instance;
+    private static SceneManagerTemp _instance;
+    public string mainScene, arCameraScene;
+    [SerializeField]
+    int currentScene = 0;
 
-    private void Start()
+    private void Awake()
     {
-        if (instance != null) // && instance != this)
+        if (_instance != null && _instance != this)
             Destroy(this.gameObject);
         else
         {
-            instance = this;
+            _instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
     }
 
-    public void ChangeScene()
+    public void LoadMainScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if(currentScene != 0)
+        {
+            currentScene = 0;
+            SceneManager.LoadScene(mainScene);
+        }
     }
 
+    public void LoadARCameraScene()
+    {
+        if(currentScene != 1)
+        {
+            currentScene = 1;
+            SceneManager.LoadScene(arCameraScene);
+        }
+    }
 
 
     bool hasBeenActivatedWithAwesomeDelayHomie = false;
