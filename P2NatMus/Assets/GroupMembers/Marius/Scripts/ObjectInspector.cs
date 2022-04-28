@@ -100,6 +100,7 @@ public class ObjectInspector : MonoBehaviour
             yDeg = ClampAngle(yDeg, yMinLimit, yMaxLimit); //Limits the y rotation
 
         }
+
         desiredRotation = Quaternion.Euler(yDeg, xDeg, 0);
         currentRotation = transform.rotation;
         rotation = Quaternion.Lerp(currentRotation, desiredRotation, Time.deltaTime * zoomDampening);
