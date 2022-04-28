@@ -12,10 +12,6 @@ public class OnTouchInfo : MonoBehaviour
         infoText.SetActive(false);
     }
 
-    private void Start()
-    {
-        GetComponent<Canvas>();
-    }
 
     private void Update()
     {
@@ -34,6 +30,6 @@ public class OnTouchInfo : MonoBehaviour
 
     public void WhenButtonPressed()
     {
-  
+        
     }
 }
