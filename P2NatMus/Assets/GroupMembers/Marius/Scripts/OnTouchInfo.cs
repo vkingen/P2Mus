@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Tis script should be placed on the canvas
+
 public class OnTouchInfo : MonoBehaviour
 {
-    public GameObject infoText;
+    public GameObject infoText; //Text that 
     
     private float _touchCounter = 0; //This variable keeps track of whether the infoText is active(1) or not(0).
     private float _touchTime; //Keeps track of time since start of program.
