@@ -2117,6 +2117,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3249133591054650261, guid: 594c6f76e9473c54592b49aac21d44dd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1237534100}
+    - target: {fileID: 3249133591054650261, guid: 594c6f76e9473c54592b49aac21d44dd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadARCameraScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249133591054650261, guid: 594c6f76e9473c54592b49aac21d44dd,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3249133591054650262, guid: 594c6f76e9473c54592b49aac21d44dd,
         type: 3}
       propertyPath: m_AnchorMax.y
