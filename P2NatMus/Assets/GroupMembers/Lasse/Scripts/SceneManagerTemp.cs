@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneManagerTemp : MonoBehaviour
 {
     private static SceneManagerTemp _instance;
-    public string mainScene, arCameraScene;
+    public string mainScene, arCameraScene, objectInspectorScene;
     [SerializeField]
     int currentScene = 0;
 
@@ -36,6 +36,16 @@ public class SceneManagerTemp : MonoBehaviour
         {
             currentScene = 1;
             SceneManager.LoadScene(arCameraScene);
+        }
+    }
+
+    public void LoadObjectInspectorScene()
+    {
+        Debug.Log("SCANNED");
+        if(currentScene != 2)
+        {
+            currentScene = 2;
+            SceneManager.LoadScene(objectInspectorScene);
         }
     }
 

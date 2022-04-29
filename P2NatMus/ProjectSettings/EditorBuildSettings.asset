@@ -5,13 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/GroupMembers/Lasse/Scenes/Prototype B/MainScreen.unity
     guid: 0ae589d78fa677643ad7f08911287521
   - enabled: 1
+    path: Assets/GroupMembers/Marius/Scenes/MainScreen1.unity
+    guid: 5883731089fa1d143b75be80454b87e3
+  - enabled: 1
+    path: Assets/GroupMembers/Marius/Scenes/Camera1.unity
+    guid: 3d5b9541bf286cd40bca793181c500ca
+  - enabled: 0
     path: Assets/GroupMembers/Lasse/Scenes/Prototype B/Camera.unity
     guid: e7ced5898d74d26439a6a1a4364b860d
-  - enabled: 0
+  - enabled: 1
     path: Assets/GroupMembers/Marius/Scenes/ObjectInspectorScene.unity
     guid: 765b7eae83e7747459e37dfc1146c100
   m_configObjects: {}
