@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/GroupMembers/Lasse/Scenes/Prototype B/MainScreen.unity
     guid: 0ae589d78fa677643ad7f08911287521
   - enabled: 1
-    path: Assets/GroupMembers/Marius/Scenes/MainScreen1.unity
+    path: Assets/GroupMembers/Marius/Scenes/NotWorking/MainScreen1.unity
     guid: 5883731089fa1d143b75be80454b87e3
   - enabled: 1
-    path: Assets/GroupMembers/Marius/Scenes/Camera1.unity
+    path: Assets/GroupMembers/Marius/Scenes/NotWorking/Camera1.unity
     guid: 3d5b9541bf286cd40bca793181c500ca
   - enabled: 0
     path: Assets/GroupMembers/Lasse/Scenes/Prototype B/Camera.unity
