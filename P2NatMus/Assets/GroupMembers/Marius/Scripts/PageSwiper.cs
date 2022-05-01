@@ -13,9 +13,9 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler //These t
     public Vector3 panelLocationVector; //Stores location of the panel
 
     public float percentThreshold = 0.2f; //Threshold that decides how large a swipe has to be to change screen.
-    public float easing = 0.5f; 
+    public float easing = 0.4f; 
 
-    public int totalPages = 1;
+    public int totalPages = 3;
     private int _currentPage = 1; //Keeps track of the page that is currently visible
 
 

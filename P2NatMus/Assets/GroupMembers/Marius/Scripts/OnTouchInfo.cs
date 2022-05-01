@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Tis script should be placed on the canvas
+//Tis script should be placed on the canvas in ObjectInspectorScene
 
 public class OnTouchInfo : MonoBehaviour
 {
