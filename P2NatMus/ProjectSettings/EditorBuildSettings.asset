@@ -5,19 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/GroupMembers/Lasse/Scenes/Prototype B/MainScreen.unity
-    guid: 0ae589d78fa677643ad7f08911287521
   - enabled: 1
-    path: Assets/GroupMembers/Marius/Scenes/NotWorking/MainScreen1.unity
-    guid: 5883731089fa1d143b75be80454b87e3
+    path: Assets/GroupMembers/Marius/Scenes/SwipeMenu/StartScene.unity
+    guid: 94923cd4efed0ae47a3d5e60b5aaa473
   - enabled: 1
-    path: Assets/GroupMembers/Marius/Scenes/NotWorking/Camera1.unity
-    guid: 3d5b9541bf286cd40bca793181c500ca
-  - enabled: 0
-    path: Assets/GroupMembers/Lasse/Scenes/Prototype B/Camera.unity
-    guid: e7ced5898d74d26439a6a1a4364b860d
+    path: Assets/GroupMembers/Marius/Scenes/SwipeMenu/ScanScene.unity
+    guid: d234afb25e920b24ea1d2354e6865b39
   - enabled: 1
-    path: Assets/GroupMembers/Marius/Scenes/ObjectInspectorScene.unity
+    path: Assets/GroupMembers/Marius/Scenes/SwipeMenu/ObjectInspectorScenes/RuneInspectorScene.unity
     guid: 765b7eae83e7747459e37dfc1146c100
+  - enabled: 1
+    path: Assets/GroupMembers/Marius/Scenes/SwipeMenu/ObjectInspectorScenes/ShieldInspectorScene.unity
+    guid: 8d7d214ee2c82864d8f414f55564e1b3
+  - enabled: 1
+    path: Assets/GroupMembers/Marius/Scenes/SwipeMenu/ObjectInspectorScenes/HornInspectorScene.unity
+    guid: 1aad893710292334982219b694742591
   m_configObjects: {}
