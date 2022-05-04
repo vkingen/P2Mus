@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/GroupMembers/Lasse/Scenes/SecondIteration/StartScene.unity
-    guid: 3613173b484454048a0395b3bf7713a3
+    path: Assets/1. iteration/Swipemenu/StartScene.unity
+    guid: 94923cd4efed0ae47a3d5e60b5aaa473
   - enabled: 1
-    path: Assets/GroupMembers/Lasse/Scenes/SecondIteration/ScanScene.unity
-    guid: 105b26f753bf7d349a546605d663235e
+    path: Assets/1. iteration/Swipemenu/ScanScene.unity
+    guid: d234afb25e920b24ea1d2354e6865b39
   - enabled: 1
-    path: Assets/GroupMembers/Lasse/Scenes/SecondIteration/InspectorScene.unity
-    guid: 7955bf3f654fc3a419447d406b27cdc4
+    path: Assets/1. iteration/Swipemenu/ObjectInspectorScenes/RuneInspectorScene.unity
+    guid: 765b7eae83e7747459e37dfc1146c100
+  - enabled: 1
+    path: Assets/1. iteration/Swipemenu/ObjectInspectorScenes/ShieldInspectorScene.unity
+    guid: 8d7d214ee2c82864d8f414f55564e1b3
+  - enabled: 1
+    path: Assets/1. iteration/Swipemenu/ObjectInspectorScenes/HornInspectorScene.unity
+    guid: 1aad893710292334982219b694742591
   m_configObjects: {}
