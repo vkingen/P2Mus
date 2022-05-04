@@ -7,6 +7,7 @@ using UnityEngine;
 //This script should be placed on the Main Camera.
 public class ObjectInspector : MonoBehaviour
 {
+    public GameObject infoText;
     public Transform target; //Target for orbit and zoom
 
     public float distance = 5.0f; //Distance from target if no target is assigned
@@ -90,6 +91,8 @@ public class ObjectInspector : MonoBehaviour
             float deltaMagDiff = prevTouchDeltaMag - TouchDeltaMag;
 
             desiredDistance += deltaMagDiff * Time.deltaTime * zoomRate * 0.0025f * Mathf.Abs(desiredDistance);
+
+            infoText.SetActive(false); // Disable information text
         }
         // If one or two fingers on the screen and they are moving - ORBIT!
         if (Input.touchCount == 1 || (Input.touchCount == 2 && Input.GetTouch(0).phase == TouchPhase.Moved))
@@ -98,7 +101,8 @@ public class ObjectInspector : MonoBehaviour
             xDeg += touchposition.x * xSpeed * 0.002f; //x rotation
             yDeg -= touchposition.y * ySpeed * 0.002f; //y rotation
             yDeg = ClampAngle(yDeg, yMinLimit, yMaxLimit); //Limits the y rotation
-
+            
+            infoText.SetActive(false); // Disable information text
         }
 
         desiredRotation = Quaternion.Euler(yDeg, xDeg, 0);
