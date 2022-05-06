@@ -12,24 +12,21 @@ public class ObjectInspector : MonoBehaviour
     public float distance = 5.0f; //Distance from target if no target is assigned
     public float maxDistance = 20; //Max zoom out distance
     public float minDistance = 1f; //Max zoom in distance
-    //public float xSpeed = 40f; //x rotation speed
-    //public float ySpeed = 40f; //y rotation speed
     public int yMinLimit = -90; //y(vertical) rotation limitation
     public int yMaxLimit = 90; //y(vertical) rotation limitation
     public float zoomRate = 40f; //zoom speed
     public float zoomDampening = 5.0f; //Drag when zooming or rotating
-    public float fineTuning = 0.0025f;
-    public float panSpeed = 40f; //Should maybe replace x and y speed in case of these values always being the same 
+    public float fineTuning = 0.0025f; //0.0025f allows for finetuning of zoomRate and panSpeed
+    public float panSpeed = 40f; //x and y rotation speed
 
-    private float xDeg = 0.0f;
-    private float yDeg = 0.0f;
-    private float currentDistance;
-    private float desiredDistance;
-    private Quaternion currentRotation;
-    private Quaternion desiredRotation;
-    private Quaternion rotation;
-    private Vector3 position;
-
+    private float _xDeg = 0.0f;
+    private float _yDeg = 0.0f;
+    private float _currentDistance;
+    private float _desiredDistance;
+    private Quaternion _currentRotation;
+    private Quaternion _desiredRotation;
+    private Quaternion _rotation;
+    private Vector3 _position;
 
     void LateUpdate()
     {
@@ -47,29 +44,30 @@ public class ObjectInspector : MonoBehaviour
 
             float deltaMagDiff = prevTouchDeltaMag - TouchDeltaMag;
 
-            desiredDistance += deltaMagDiff * Time.deltaTime * fineTuning * zoomRate * Mathf.Abs(desiredDistance); //0.0025f allows for finetuning of zoomRate
+            _desiredDistance += deltaMagDiff * Time.deltaTime * fineTuning * zoomRate * Mathf.Abs(_desiredDistance); 
         }
 
         // If one or two fingers on the screen and they are moving - ORBIT!
         if (Input.touchCount == 1 || (Input.touchCount == 2 && Input.GetTouch(0).phase == TouchPhase.Moved))
         {
             Vector2 touchposition = Input.GetTouch(0).deltaPosition; //Gets position of touch movement
-            xDeg += touchposition.x * panSpeed * fineTuning; //x rotation xSpeed * 0.002f
-            yDeg -= touchposition.y * panSpeed * fineTuning; //y rotation ySpeed * 0.002f
-            yDeg = ClampAngle(yDeg, yMinLimit, yMaxLimit); //Limits the y rotation
+            _xDeg += touchposition.x * panSpeed * fineTuning; //x rotation
+            _yDeg -= touchposition.y * panSpeed * fineTuning; //y rotation
+            _yDeg = ClampAngle(_yDeg, yMinLimit, yMaxLimit); //Limits the y rotation
         }
-        desiredRotation = Quaternion.Euler(yDeg, xDeg, 0);
-        currentRotation = transform.rotation;
-        rotation = Quaternion.Lerp(currentRotation, desiredRotation, Time.deltaTime * zoomDampening);
-        transform.rotation = rotation;        
+
+        _desiredRotation = Quaternion.Euler(_yDeg, _xDeg, 0); //0 because there's no rotation around the z axis
+        _currentRotation = transform.rotation;
+        _rotation = Quaternion.Lerp(_currentRotation, _desiredRotation, Time.deltaTime * zoomDampening);
+        transform.rotation = _rotation;        
 
         ////////Orbit Position
-        desiredDistance = Mathf.Clamp(desiredDistance, minDistance, maxDistance);
-        currentDistance = Mathf.Lerp(currentDistance, desiredDistance, Time.deltaTime * zoomDampening);
+        _desiredDistance = Mathf.Clamp(_desiredDistance, minDistance, maxDistance);
+        _currentDistance = Mathf.Lerp(_currentDistance, _desiredDistance, Time.deltaTime * zoomDampening);
 
-        position = target.position - (rotation * Vector3.forward * currentDistance);
+        _position = target.position - (_rotation * Vector3.forward * _currentDistance);
 
-        transform.position = position;
+        transform.position = _position;
     }
     private static float ClampAngle(float angle, float min, float max)
     {
@@ -80,3 +78,4 @@ public class ObjectInspector : MonoBehaviour
         return Mathf.Clamp(angle, min, max);
     }
 }
+
