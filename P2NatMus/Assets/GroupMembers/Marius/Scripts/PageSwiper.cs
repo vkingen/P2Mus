@@ -18,6 +18,10 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler //These t
     public int totalPages = 3;
     private int _currentPage = 1; //Keeps track of the page that is currently visible
 
+
+    public Color highLighted = new Color(); // This color is used for the navigation bar
+    public Color notHighLighted = new Color(); // This color is used for the navigation bar
+
     CurrentPageData _currentPageData;
     private void Awake()
     {
@@ -156,42 +160,43 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler //These t
         _currentPageData.currentPage = 3;
     }
 
-    public void SetTransparencyCameraButton(float transparency)
-    { 
-        Color color = cameraButton.color;
-        color.a = transparency;
-        cameraButton.color = color;
+    public void SetTransparencyCameraButton(Color color)
+    {
+        Color _color = cameraButton.color;
+        _color = color;
+        cameraButton.color = _color;
     }
 
-    public void SetTransparencyHomeButton(float transparency)
-    { 
-        Color color = homeButton.color;
-        color.a = transparency;
-        homeButton.color = color;
+    public void SetTransparencyHomeButton(Color color)
+    {
+        Color _color = homeButton.color;
+        _color = color;
+        homeButton.color = _color;
     }
 
-    public void SetTransparencyInventoryButton(float transparency)
-    { 
-        Color color = inventoryButton.color;
-        color.a = transparency;
-        inventoryButton.color = color;
+    public void SetTransparencyInventoryButton(Color color)
+    {
+        Color _color = inventoryButton.color;
+        _color = color;
+        inventoryButton.color = _color;
     }
+
 
     private void Update()
     {
         if (panelLocationVector == new Vector3(720, 1480, 0)) //Transparency of bottom home button
-            SetTransparencyHomeButton(1f);
+            SetTransparencyHomeButton(highLighted);
         else
-            SetTransparencyHomeButton(0.5f);
+            SetTransparencyHomeButton(notHighLighted);
 
         if (panelLocationVector == new Vector3(-720, 1480, 0)) //Transparency of bottom camera button
-            SetTransparencyCameraButton(1f);
+            SetTransparencyCameraButton(highLighted);
         else
-            SetTransparencyCameraButton(0.5f);
+            SetTransparencyCameraButton(notHighLighted);
 
         if (panelLocationVector == new Vector3(-2160, 1480, 0)) //Transparency of bottom inventory button
-            SetTransparencyInventoryButton(1f);
+            SetTransparencyInventoryButton(highLighted);
         else
-            SetTransparencyInventoryButton(0.5f);
+            SetTransparencyInventoryButton(notHighLighted);
     }
 }
