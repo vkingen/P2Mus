@@ -10,6 +10,8 @@ using UnityEngine.UI;
 
 public class PageNavigation : MonoBehaviour, IDragHandler, IEndDragHandler //These two classes uses built in functions to detect when a touch is dragged and when that drag has ended.
 {
+
+
     public Vector3 panelLocationVector; //Stores location of the panel
 
     public float percentThreshold = 0.2f; //Threshold that decides how large a swipe has to be to change screen.
@@ -22,27 +24,26 @@ public class PageNavigation : MonoBehaviour, IDragHandler, IEndDragHandler //The
 
     void Start()
     {
-        panelLocationVector = transform.position; //Sets location of the panel to its current location
+        panelLocationVector = transform.position; //Sets location of the panel to its current location, this is the start posiion of the panel
     }
 
 
     public void OnDrag(PointerEventData data)
     {
-        float difference = data.pressPosition.x - data.position.x; //'difference' gets the x position values from start of drag to end of drag to see how far we've dragged. 
-        transform.position = panelLocationVector - new Vector3(difference, 0, 0); //Subtracts the difference of how far we've dragged from the panels idle state.
+        float difference = data.pressPosition.x - data.position.x;    
+        transform.position = panelLocationVector - new Vector3(difference, 0, 0); 
     }
 
 
     public void OnEndDrag(PointerEventData data)
     {
-        float percentage = (data.pressPosition.x - data.position.x) / Screen.width; //percentage variable that gets x values of the swipe to see direction of the swipe,
-                                                                                    //and divides it with screen width to see how much of the screen was swiped across. 
-
-        if (Mathf.Abs(percentage) >= percentThreshold) //If the 'percentage' variable is larger than percentThreshhold 
+        float percentage = (data.pressPosition.x - data.position.x) / Screen.width; 
+                                                                                        
+        if (Mathf.Abs(percentage) >= percentThreshold) 
         {
-            Vector3 newLocation = panelLocationVector; //Create newLocation Vector3 variable that stores PanelLocation 
+            Vector3 newLocation = panelLocationVector; 
 
-            if (percentage > 0 && _currentPage < totalPages) //If percentage is positive (x values of swipe above 0) and the _currentpage nr. is smaller than the amount of totalPages
+            if (percentage > 0 && _currentPage < totalPages) 
             {
                 _currentPage++; //Add one to _currentPage
                 newLocation += new Vector3(-Screen.width, 0, 0); //And set new panelLocation = Change screen
@@ -73,6 +74,7 @@ public class PageNavigation : MonoBehaviour, IDragHandler, IEndDragHandler //The
             yield return null;
         }
     }
+
 
     //THE METHODS BELOW HAS TO DO WITH NAVIGATION USING THE BOTTOMBAR
 
