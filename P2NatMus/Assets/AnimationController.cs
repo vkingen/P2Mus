@@ -7,10 +7,10 @@ public class AnimationController : MonoBehaviour
 {
     private Animator _animator;
 
-    [SerializeField] // make tooltip
+    [SerializeField] 
     private bool _animateOnStart = false;
 
-    [SerializeField] // make tooltip
+    [SerializeField] 
     private float _delaySpeed = 1.5f;
 
     public GameObject youFoundAnObjectInfoText;
@@ -29,19 +29,19 @@ public class AnimationController : MonoBehaviour
         _animator.SetBool("IsOpen", true);
         StartCoroutine(StartSceneWithDelay());
     }
-    public void ResetAnimation()
-    {
-        _animator.SetBool("IsClose", true);
-    }
     public void EnableFoundObjectInfoText()
     {
         if(youFoundAnObjectInfoText != null)
             youFoundAnObjectInfoText.SetActive(true);
     }
-
     IEnumerator StartSceneWithDelay()
     {
         yield return new WaitForSeconds(_delaySpeed);
         SceneManager.LoadScene("InspectorScene");
+    }
+
+    public void ResetAnimation()
+    {
+        _animator.SetBool("IsClose", true);
     }
 }

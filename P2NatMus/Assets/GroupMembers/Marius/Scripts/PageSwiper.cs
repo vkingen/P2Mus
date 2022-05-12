@@ -28,12 +28,10 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler //These t
     {
         panelLocationVector = transform.position; //Sets location of the panel to its current location
         _currentPageData = FindObjectOfType<CurrentPageData>();
-        Debug.Log(_currentPageData.currentPage + " is the current page number");
 
         if (_currentPageData.currentPage == 1)
         {
             OnClickHomeBottom();
-            
         }
         else if (_currentPageData.currentPage == 2)
         {

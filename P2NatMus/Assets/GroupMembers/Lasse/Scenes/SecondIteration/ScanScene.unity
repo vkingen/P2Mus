@@ -187,7 +187,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &101775001
+--- !u!21 &134589386
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -196,7 +196,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: 'Rune_NMaterial
 
-    -13512'
+    -5338'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -209,7 +209,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: daf2931f0eb347bf98983762f86d0f8d, type: 3}
+        m_Texture: {fileID: 2800000, guid: da766510f8a24cdc9959e958504ea2ec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -477,6 +477,34 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!21 &437375867
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: '--- EMPTY ---Material
+
+    -5346'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &452110228
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,6 +790,34 @@ MonoBehaviour:
   runeInspectorScene: RuneInspectorScene
   shieldInspectorScene: InspectorScene
   hornInspectorScene: HornInspectorScene
+--- !u!21 &911844989
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: '--- EMPTY ---Material
+
+    -5342'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1184584514
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,34 +910,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!21 &1194234076
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'ShieldMaterial
-
-    -13526'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2d7576d08ce744a19c419680566d92d7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1372103617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,34 +1336,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568501941}
   m_CullTransparentMesh: 0
---- !u!21 &1950197463
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'New_HornMaterial
-
-    -13540'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5b4c468b280849778924dac5663067fc, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!114 &1673731242805397922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2240,7 +2240,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 101775001}
+      objectReference: {fileID: 134589386}
     - target: {fileID: 6876914306434169593, guid: e485b4852821b554abf2bc9f4e12a3e3,
         type: 3}
       propertyPath: OnTargetFound.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2255,7 +2255,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1194234076}
+      objectReference: {fileID: 911844989}
+    - target: {fileID: 6876914306434169598, guid: e485b4852821b554abf2bc9f4e12a3e3,
+        type: 3}
+      propertyPath: mDataSetPath
+      value: --- EMPTY ---
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876914306434169598, guid: e485b4852821b554abf2bc9f4e12a3e3,
+        type: 3}
+      propertyPath: mTrackableName
+      value: --- EMPTY ---
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876914306768038192, guid: e485b4852821b554abf2bc9f4e12a3e3,
+        type: 3}
+      propertyPath: mDataSetPath
+      value: --- EMPTY ---
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876914306768038192, guid: e485b4852821b554abf2bc9f4e12a3e3,
+        type: 3}
+      propertyPath: mTrackableName
+      value: --- EMPTY ---
+      objectReference: {fileID: 0}
     - target: {fileID: 6876914306768038195, guid: e485b4852821b554abf2bc9f4e12a3e3,
         type: 3}
       propertyPath: OnTargetFound.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2270,7 +2290,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1950197463}
+      objectReference: {fileID: 437375867}
     - target: {fileID: 6876914306843994532, guid: e485b4852821b554abf2bc9f4e12a3e3,
         type: 3}
       propertyPath: m_Name

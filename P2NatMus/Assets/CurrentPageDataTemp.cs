@@ -12,8 +12,6 @@ public class CurrentPageDataTemp : MonoBehaviour
     }
     public void ChangeCurrentPageOnSceneLoad(int pageNumber)
     {
-        //currentPageData.currentPage = pageNumber;
         currentPageData.ChangeCurrentPageOnSceneLoad(pageNumber);
-        Debug.Log("PAGE NUMBER IS " + currentPageData.currentPage);
     }
 }

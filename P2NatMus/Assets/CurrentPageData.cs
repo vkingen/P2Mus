@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CurrentPageData : MonoBehaviour
 {
+    [HideInInspector]
     public int currentPage = 1;
 
-    
     private static CurrentPageData _instance;
     private void Awake()
     {
@@ -19,16 +19,8 @@ public class CurrentPageData : MonoBehaviour
         }
     }
 
-    PageSwiper pageSwiper;
-
-    private void Start()
-    {
-        pageSwiper = FindObjectOfType<PageSwiper>();
-    }
-
     public void ChangeCurrentPageOnSceneLoad(int pageNumber)
     {
         currentPage = pageNumber;
-        Debug.Log("PPPPPPPPPPPPPPPPPPPPPPP" + currentPage);
     }
 }
