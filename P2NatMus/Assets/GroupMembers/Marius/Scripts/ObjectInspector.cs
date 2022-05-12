@@ -28,6 +28,8 @@ public class ObjectInspector : MonoBehaviour
     private Quaternion _rotation;
     private Vector3 _position;
 
+    public GameObject rotateAndZoomText;
+
     void LateUpdate()
     {
         // If two fingers on the screen - ZOOM!
@@ -50,6 +52,7 @@ public class ObjectInspector : MonoBehaviour
         // If one or two fingers on the screen and they are moving - ORBIT!
         if (Input.touchCount == 1 || (Input.touchCount == 2 && Input.GetTouch(0).phase == TouchPhase.Moved))
         {
+            rotateAndZoomText.SetActive(false);
             Vector2 touchposition = Input.GetTouch(0).deltaPosition; //Gets position of touch movement
             _xDeg += touchposition.x * panSpeed * _fineTuning; //x rotation
             _yDeg -= touchposition.y * panSpeed * _fineTuning; //y rotation
