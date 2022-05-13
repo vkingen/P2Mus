@@ -1415,6 +1415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword (Element 5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1376454829852232, guid: 9ce84a6e766a4d44b9a6b0a418f40820, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4941282239900594, guid: 9ce84a6e766a4d44b9a6b0a418f40820, type: 3}
       propertyPath: m_RootOrder
       value: 5
