@@ -30,6 +30,13 @@ public class ObjectInspector : MonoBehaviour
 
     public GameObject rotateAndZoomText;
 
+    private void Start()
+    {
+        distance = Vector3.Distance(transform.position, target.position);
+        _currentDistance = distance;
+        _desiredZoomDistance = distance;
+    }
+
     void LateUpdate()
     {
         // If two fingers on the screen - ZOOM!
