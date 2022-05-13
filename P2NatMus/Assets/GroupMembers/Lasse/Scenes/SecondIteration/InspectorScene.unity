@@ -141,7 +141,7 @@ PrefabInstance:
     - target: {fileID: 1249861863357113873, guid: 066fd31b0eddc7240b8356549eaf8db0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1249861863357113874, guid: 066fd31b0eddc7240b8356549eaf8db0,
         type: 3}
@@ -1417,7 +1417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4941282239900594, guid: 9ce84a6e766a4d44b9a6b0a418f40820, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4941282239900594, guid: 9ce84a6e766a4d44b9a6b0a418f40820, type: 3}
       propertyPath: m_LocalScale.x
@@ -1441,7 +1441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4941282239900594, guid: 9ce84a6e766a4d44b9a6b0a418f40820, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4941282239900594, guid: 9ce84a6e766a4d44b9a6b0a418f40820, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1471,6 +1471,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23118688838027476, guid: 9ce84a6e766a4d44b9a6b0a418f40820,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca590ae0c6a593640af97c45a98c744c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ce84a6e766a4d44b9a6b0a418f40820, type: 3}
 --- !u!4 &1141229979 stripped
@@ -1518,13 +1523,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1452266239}
   distance: 15
-  maxDistance: 20
+  maxDistance: 10
   minDistance: 1
   zoomRate: 20
   dampening: 5
-  panSpeed: 40
-  yMinLimit: -360
-  yMaxLimit: 360
+  panSpeed: 20
+  yMinLimit: -90
+  yMaxLimit: 90
   rotateAndZoomText: {fileID: 1057844069}
 --- !u!81 &1174744201
 AudioListener:
@@ -1713,8 +1718,8 @@ Transform:
   m_Children:
   - {fileID: 454703683990720949}
   - {fileID: 2129014991}
-  - {fileID: 2116338929}
   - {fileID: 7954611116174157776}
+  - {fileID: 2116338929}
   - {fileID: 4726410922087828}
   - {fileID: 1141229979}
   m_Father: {fileID: 0}
@@ -2748,6 +2753,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shield (Element 1)
       objectReference: {fileID: 0}
+    - target: {fileID: 137008, guid: d58df8aa7dff7471b9b1860d8640c9de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 467310, guid: d58df8aa7dff7471b9b1860d8640c9de, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2804,6 +2813,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2348032, guid: d58df8aa7dff7471b9b1860d8640c9de, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 28b402483ee07274081c78a6a373df9c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d58df8aa7dff7471b9b1860d8640c9de, type: 3}
 --- !u!1 &2129014990 stripped
@@ -5340,7 +5353,7 @@ Transform:
   m_LocalScale: {x: 3.6979513, y: 3.6979513, z: 3.6979513}
   m_Children: []
   m_Father: {fileID: 1452266239}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!23 &9092583439163514047
 MeshRenderer:
