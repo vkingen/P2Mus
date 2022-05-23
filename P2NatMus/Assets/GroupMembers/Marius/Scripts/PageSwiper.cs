@@ -18,10 +18,6 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler //These t
     public int totalPages = 3;
     private int _currentPage = 1; //Keeps track of the page that is currently visible
 
-
-    public Color highLighted = new Color(); // This color is used for the navigation bar
-    public Color notHighLighted = new Color(); // This color is used for the navigation bar
-
     CurrentPageData _currentPageData;
     private void Awake()
     {
@@ -104,6 +100,10 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler //These t
 
     public GameObject PanelLocationObject; //The 'Panel' should be assigned to this Gameobject.
                                            //This gameobject is neccesarry for the panels location to directly, visually, change when using the bottombar. 
+
+    public Color highLighted = new Color(); // This color is used for the navigation bar
+    public Color notHighLighted = new Color(); // This color is used for the navigation bar
+
     Vector3 homeScreen = new Vector3(720, 1480, 0); //New vector3 based on the homeScreens location
     Vector3 cameraScreen = new Vector3(-720, 1480, 0); //New vector3 based on the cameraScreens location
     Vector3 inventoryScreen = new Vector3(-2160, 1480, 0); //New vector3 based on the inventoryScreens location
@@ -160,23 +160,23 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler //These t
         _currentPageData.currentPage = 3;
     }
 
-    public void SetTransparencyCameraButton(Color color)
+    public void SetColorCameraButton(Color color)
     {
-        Color _color = cameraButton.color;
+        Color _color;
         _color = color;
         cameraButton.color = _color;
     }
 
-    public void SetTransparencyHomeButton(Color color)
+    public void SetColorHomeButton(Color color)
     {
-        Color _color = homeButton.color;
+        Color _color;
         _color = color;
         homeButton.color = _color;
     }
 
-    public void SetTransparencyInventoryButton(Color color)
+    public void SetColorInventoryButton(Color color)
     {
-        Color _color = inventoryButton.color;
+        Color _color;
         _color = color;
         inventoryButton.color = _color;
     }
@@ -184,19 +184,19 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler //These t
 
     private void Update()
     {
-        if (panelLocationVector == new Vector3(720, 1480, 0)) //Transparency of bottom home button
-            SetTransparencyHomeButton(highLighted);
+        if (panelLocationVector == new Vector3(720, 1480, 0)) //Color of bottom home button
+            SetColorHomeButton(highLighted);
         else
-            SetTransparencyHomeButton(notHighLighted);
+            SetColorHomeButton(notHighLighted);
 
-        if (panelLocationVector == new Vector3(-720, 1480, 0)) //Transparency of bottom camera button
-            SetTransparencyCameraButton(highLighted);
+        if (panelLocationVector == new Vector3(-720, 1480, 0)) //Color of bottom camera button
+            SetColorCameraButton(highLighted);
         else
-            SetTransparencyCameraButton(notHighLighted);
+            SetColorCameraButton(notHighLighted);
 
-        if (panelLocationVector == new Vector3(-2160, 1480, 0)) //Transparency of bottom inventory button
-            SetTransparencyInventoryButton(highLighted);
+        if (panelLocationVector == new Vector3(-2160, 1480, 0)) //Color of bottom inventory button
+            SetColorInventoryButton(highLighted);
         else
-            SetTransparencyInventoryButton(notHighLighted);
+            SetColorInventoryButton(notHighLighted);
     }
 }

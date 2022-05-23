@@ -46,9 +46,9 @@ public class PageNavigation : MonoBehaviour, IDragHandler, IEndDragHandler //The
             if (percentage > 0 && _currentPage < totalPages) 
             {
                 _currentPage++; //Add one to _currentPage
-                newLocation += new Vector3(-Screen.width, 0, 0); //And set new panelLocation = Change screen
+                newLocation += new Vector3(-Screen.width, 0, 0); 
             }
-            else if (percentage < 0 && _currentPage > 1) //If percentage variable is negative (x values of swipe below 0) and current page above 1
+            else if (percentage < 0 && _currentPage > 1) 
             {
                 _currentPage--; //Minus one to _currentPage
                 newLocation += new Vector3(Screen.width, 0, 0); //And set new panelLocation = Change screen
@@ -60,7 +60,7 @@ public class PageNavigation : MonoBehaviour, IDragHandler, IEndDragHandler //The
         }
         else
         {
-            StartCoroutine(SmoothMove(transform.position, panelLocationVector, easing)); //If 'percentage' is smaller than percentThreshold, smoothen transition back to current panelLocation. 
+            StartCoroutine(SmoothMove(transform.position, panelLocationVector, easing)); 
         }
     }
 
@@ -84,7 +84,7 @@ public class PageNavigation : MonoBehaviour, IDragHandler, IEndDragHandler //The
                                            //This gameobject is neccesarry for the panels location to directly, visually, change when using the bottombar. 
 
 
-    public void OnClickHomeBottom() //Should be placed on Home button in bottombar
+    public void OnClickHomeBottom()
     {
         Vector3 homeScreen = new Vector3(720, 1480, 0); //New vector3 based on the homeScreens location
         PanelLocationObject.transform.position = homeScreen; //new Vector3(720, 1480, 0);

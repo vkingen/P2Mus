@@ -1436,7 +1436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1452266239}
-  distance: 3
+  distance: 1.75
   maxDistance: 3
   minDistance: 0.5
   zoomRate: 20

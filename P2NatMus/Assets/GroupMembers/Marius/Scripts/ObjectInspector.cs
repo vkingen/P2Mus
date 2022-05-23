@@ -9,7 +9,7 @@ public class ObjectInspector : MonoBehaviour
 {
     public Transform target; //Target for orbit and zoom
 
-    public float distance = 5.0f; //Distance from target if no target is assigned
+    public float startDistance = 1.75f; //Start distance from target 
     public float maxDistance = 20; //Max zoom out distance
     public float minDistance = 1f; //Max zoom in distance
     public float zoomRate = 40f; //zoom speed
@@ -30,11 +30,9 @@ public class ObjectInspector : MonoBehaviour
 
     public GameObject rotateAndZoomText;
 
-    private void Start()
+    private void Start() //Sets the starting position of the camera
     {
-        distance = Vector3.Distance(transform.position, target.position);
-        _currentDistance = distance;
-        _desiredZoomDistance = distance;
+        _desiredZoomDistance = startDistance;
     }
 
     void LateUpdate()
