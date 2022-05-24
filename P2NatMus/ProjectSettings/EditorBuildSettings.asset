@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/GroupMembers/Lasse/Scenes/SecondIteration/StartScene.unity
+    path: Assets/0FinalProject/Scenes/StartScene.unity
     guid: 3613173b484454048a0395b3bf7713a3
   - enabled: 1
-    path: Assets/GroupMembers/Lasse/Scenes/SecondIteration/InspectorScene.unity
+    path: Assets/0FinalProject/Scenes/InspectorScene.unity
     guid: 7955bf3f654fc3a419447d406b27cdc4
   m_configObjects: {}
