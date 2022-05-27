@@ -486,10 +486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startScene: StartScene
-  scanScene: ScanScene
-  runeInspectorScene: 
   shieldInspectorScene: InspectorScene
-  hornInspectorScene: 
 --- !u!4 &35169854
 Transform:
   m_ObjectHideFlags: 0
